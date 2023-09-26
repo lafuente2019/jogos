@@ -23,3 +23,4 @@ while(count == 0):
         print("### Opção invalida ###")
     elif(jogo == 0):
         count +=1    
+

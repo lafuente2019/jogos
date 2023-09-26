@@ -1,7 +1,7 @@
 import random
 
 
-def adivinhacao():
+def jogar():
     print("*********************************")
     print("Bem vindo ao jogo de Adivinhação!")
     print("*********************************")
@@ -28,11 +28,12 @@ def adivinhacao():
         chute_str = input("Digite um número entre 1 e 100: ")
         print("Você digitou ", chute_str)
         chute = int(chute_str)
+        
 
         if(chute < 1 or chute > 100):
             print("Você deve digitar um número entre 1 e 100!")
             continue
-
+        
         acertou = chute == numero_secreto
         maior = chute > numero_secreto
         menor = chute < numero_secreto
@@ -55,3 +56,6 @@ def adivinhacao():
                         numero_secreto, pontos))
 
     print("Fim do jogo")
+
+if(__name__ == "__main__"):
+    jogar()    

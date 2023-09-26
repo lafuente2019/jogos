@@ -2,25 +2,15 @@ import random
 
 
 def jogar():
-    print("*********************************")
-    print("Bem vindo ao jogo de Adivinhação!")
-    print("*********************************")
-
-    numero_secreto = random.randrange(1, 101)
+    
+    imprime_welcome()
+    numero_secreto = captura_numero_secreto()
+    
     total_de_tentativas = 0
     pontos = 1000
+    nivel = nivel_jogo()
 
-    print("Qual o nível de dificuldade?")
-    print("(1) Fácil (2) Médio (3) Difícil")
-
-    nivel = int(input("Defina o nível: "))
-
-    if(nivel == 1):
-        total_de_tentativas = 20
-    elif(nivel == 2):
-        total_de_tentativas = 10
-    else:
-        total_de_tentativas = 5
+    total_de_tentativas = total_tentativas(nivel)
 
     for rodada in range(1, total_de_tentativas + 1):
         print("Tentativa {} de {}".format(rodada, total_de_tentativas))
@@ -57,5 +47,34 @@ def jogar():
 
     print("Fim do jogo")
 
+
+def imprime_welcome():
+    print("*********************************")
+    print("Bem vindo ao jogo de Adivinhação!")
+    print("*********************************")
+
+def captura_numero_secreto():
+    numero_secreto = random.randrange(1, 101)
+    return numero_secreto
+
+def nivel_jogo():
+    print("Qual o nível de dificuldade?")
+    print("(1) Fácil (2) Médio (3) Difícil")
+    nivel = int(input("Defina o nível: "))
+    return nivel
+
+def total_tentativas(nivel):
+    while(nivel != 1 or nivel != 2 or nivel !=3):
+        if(nivel == 1):
+            total_de_tentativas = 20
+            return total_de_tentativas
+        elif(nivel == 2):
+            total_de_tentativas = 10
+            return total_de_tentativas
+        elif(nivel == 3):
+            total_de_tentativas = 5
+            return total_de_tentativas
+
 if(__name__ == "__main__"):
     jogar()    
+

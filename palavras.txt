@@ -1,4 +1,3 @@
-maçã
 goiaba
 melancia
 laranja
@@ -13,7 +12,6 @@ jabuticaba
 acerola
 pessego
 ameixa
-limão
 tomate
 amora
 pera

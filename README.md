@@ -66,9 +66,7 @@ Muitas empresas precisam monitorar, transformar e disponibilizar dados de difere
 ## Execução Manual
 Exemplo de payload JSON para publicar manualmente no tópico Pub/Sub:
 
-json
-Copiar
-Editar
+
 {
   "project_id": "seu-projeto-gcp",
   "region": "us-central1",
@@ -100,17 +98,6 @@ Datasets: raw_<projeto>, prep_<projeto>
 
 Tabelas: tb_<entidade>_<detalhe>
 
-Estrutura de pastas:
-
-graphql
-Copiar
-Editar
-├── dags/                  # caso use Airflow
-├── spark_jobs/
-│   ├── transform_step1.py
-│   └── transform_step2.py
-├── terraform/             # IaC para provisionamento GCP
-└── scripts/               # scripts utilitários
 Monitoramento e Logs
 Stackdriver Logging centraliza logs do Dataproc, Functions e Scheduler.
 
@@ -121,9 +108,7 @@ Alertas configurados para falhas críticas ou uso anômalo de recursos.
 Como Executar Manualmente
 Publicação de mensagem diretamente pelo terminal com gcloud:
 
-bash
-Copiar
-Editar
+
 gcloud pubsub topics publish foundation-start-dataproc-workflow \
   --message='{
     "project_id":"seu-projeto-gcp",
@@ -142,15 +127,11 @@ gcloud pubsub topics publish foundation-start-dataproc-workflow \
 Como Contribuir
 Clone o repositório:
 
-bash
-Copiar
-Editar
+
 git clone https://github.com/sua-org/seu-projeto-gcp.git
 Crie uma branch para suas alterações:
 
-bash
-Copiar
-Editar
+
 git checkout -b feature/minha-nova-feature
 Realize commits e envie seu Pull Request.
 
